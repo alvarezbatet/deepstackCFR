@@ -1,0 +1,4 @@
+use Multiprocess to speed up 
+use Numba or Cython or PyPy (in order) try it on classes too
+	make 2 different funcs for computing matrix and retrieveing
+	Numba entire Values? Nodes and constants
