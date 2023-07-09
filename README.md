@@ -22,3 +22,5 @@ Betting rounds:
 -flop:
 -turn:
 -river:
+
+![](https://github.com/alvarezbatet/deepstackCFR/blob/main/test-gif.gif)
