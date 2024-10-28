@@ -21,8 +21,6 @@ def Values(S,sigma,r1,r2, matrix): #HINT S can't be chance node, leaf chance nod
             Mask(S.better_values,np.array(S.board))  # because NN not 100% accurate
             Mask(S.opponent_values, np.array(S.board))
     else:
-        S.better_values = np.zeros(constants.hand_count, dtype='float32')
-        S.opponent_values = np.zeros(constants.hand_count, dtype='float32')
         for node in S.children:
             a = node.action
             r1a = Update_range(r1,sigma,a)
