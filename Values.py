@@ -28,5 +28,5 @@ def Values(S,sigma,r1,r2, matrix): #HINT S can't be chance node, leaf chance nod
             r1a = Update_range(r1,sigma,a)
             v1a, v2a = Values(node,node.strategy,r2,r1a, matrix)
             S.better_values += v1a*sigma[:,a]
-            S.opponent_values += v2a*np.sum(sigma[:, a]*r1)  #MOD different in paper, this way it's weighted
+            S.opponent_values += v2a*np.sum(sigma[:, a])  #MOD different in paper, this way it's weighted
     return(S.opponent_values, S.better_values)  #shouldn't v1 and v2 be opposite, no because different ranges in compute utility.
