@@ -1,8 +1,8 @@
 # deepstackCFR 
 
-THIS IS A TEST REPOSITORY, I HAVE A WORKING VERSION BUT IT STILL NEEDS TO BE CLEANED BEFORE UPLOADING IT HERE.
+THIS IS A TEST REPOSITORY!!! The bot only plays the last turn of the game (River).To play the preflop, flop, and turn you need to train an NN to aproximate the values outputed by the algorithm, I don't have this NN trained yet.
 
-Poker bot that plays "Heads Up no limit Texas Holdem".
+This Poker bot plays "Heads Up no limit Texas Holdem".
 Players' stacks are set to 200 and actions available are: Fold, Call, Raise(the amount that's in the Pot), and All in.
 
 The code is a python adaptation of the study made by the Alberta Machine Intelligence Institute and the Charles University Grant Agency.
