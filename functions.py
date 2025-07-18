@@ -169,7 +169,7 @@ def nb_make_positive(x):
                 x[i,j] = np.float32(0)
 
 @jit(nopython=True)
-def make_Range_positive(R):  # Stupid
+def make_Range_positive(R):  # Wrong
     for hand in range(1326):
         minim = min(R[hand])
         if minim < 0:
