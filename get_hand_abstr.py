@@ -8,23 +8,8 @@ Hand strength: Probability that a given hand will win against random opponents i
 
 Potential: How the hand might improve or weaken on future cards.
 
-Board texture: Characteristics of the community cards affecting hand strength (e.g., flush or straight possibilities).
+Hands with similar features are grouped into the same bucket, Equivalent hands differing only by suits are treated as identical (e.g., ♠A♥K vs. ♦A♣K).
 
-Hands with similar features are grouped into the same bucket.
-
-
-3. Board Abstraction
-Boards themselves can be abstracted based on their texture:
-
-Number of connected cards (possible straights)
-
-Number of suited cards (flush draws)
-
-High card values
-
-Paired boards, etc.
-
-Boards with similar strategic impact are grouped.
 
 
 Summary
@@ -255,3 +240,4 @@ finally:
     f.close()
 
     print("File saved and closed.")
+
