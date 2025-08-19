@@ -82,7 +82,7 @@ def get_flop_potential(hand, file_path):
                 print(hand, flop, norm_count, "/", 22100)
             for card in deck:
                 if new_card_is_compatible(card, hand, flop):
-                    str_turn = strength(hand, flop + [card])  #strenght the lower the better
+                    str_turn = strength(hand, flop + [card])  #strength the lower the better
                     if str_turn < str_flop:  #if str decreases it means next street has higher strength so there is more potential at current street.
                         flop_potential += 1
                     if str_turn > str_flop:
@@ -109,7 +109,7 @@ def get_turn_potential(hand, file_path):
             strenght_turn =+ str_turn
             norm_count += 1
             for card in deck:
-                str_river = strength(hand, turn  + [card])  #strenght the lower the better
+                str_river = strength(hand, turn  + [card])  #strength the lower the better
                 if str_river < str_turn:
                     turn_potential += 1
                 if str_river > str_turn:
@@ -245,7 +245,7 @@ try:
 
         flop_potential, strength_flop = str(get_flop_potential(hand, r"C:\Users\Roger\Desktop\programing\pluribus\poker_flops.txt"))
         turn_potential, strenght_turn = str(get_turn_potential(hand, r"C:\Users\Roger\Desktop\programing\pluribus\poker_turns.txt"))
-        
+        similar_hands, inds_rank = get_similar_hands()
         suit_isomorphism = inds_rank[hand_ind][1]
         print([strength_river, strength_flop, strenght_turn, flop_potential, turn_potential, suit_isomorphism])
         f.write(" ".join([strength_river, strength_flop, strenght_turn, flop_potential, turn_potential, suit_isomorphism]) + "\n")
@@ -253,4 +253,5 @@ except KeyboardInterrupt:
     print("\nKeyboard interrupt detected. Saving progress...")
 finally:
     f.close()
+
     print("File saved and closed.")
